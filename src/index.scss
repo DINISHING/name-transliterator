@@ -1,0 +1,35 @@
+// Color Override
+
+$white:    #fcfaf2 !default; //Shironeri*/
+$gray-100: #ededed !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #bdc0ba !default; //Shironezumi
+$gray-500: #91989f !default; //Ginnezumi
+$gray-600: #787d7b !default; //Sunezumi
+$gray-700: #707C74 !default; //Rikyunezumi
+$gray-800: #4F4F48 !default; //Dobunezumi
+$gray-900: #1c1c1c !default; //Sumi
+$black:    #080808 !default; //Kuro
+
+$blue:    #006284 !default; //Hanada
+$indigo:  #113285 !default; //Konjo
+$purple:  #66327C !default; //Sumire
+$pink:    #E03C8A !default; //Tsutsuji
+$red:     #CB1B45 !default; //Kurenai
+$orange:  #F75C2F !default; //Benihi
+$yellow:  #FFB11B !default; //Yamabuki
+$green:   #227D51 !default; //Midori
+$teal:    #00AA90 !default; //Aomidori
+$cyan:    #81C7D4 !default; //Mizu
+
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+TC:wght@500&display=swap");
+
+body {
+  font-family: Inter, "Noto Sans TC", var(--bs-body-font-family);
+}
+
+#dns {
+  height: 1.8em;
+}
