@@ -66,7 +66,7 @@ function App() {
               <li>結果僅供參考</li>
               <li>
                 任何字音錯誤請到
-                <a href="https://github.com/vocabulary">該個倉庫</a>反饋
+                <a href="https://github.com/DINISHING/vocabulary">該個倉庫</a>反饋
               </li>
             </ul>
           </div>
