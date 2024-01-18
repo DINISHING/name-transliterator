@@ -66,7 +66,8 @@ function App() {
               <li>結果僅供參考</li>
               <li>
                 任何字音錯誤請到
-                <a href="https://github.com/DINISHING/vocabulary">該個倉庫</a>反饋
+                <a href="https://github.com/DINISHING/vocabulary">該個倉庫</a>
+                反饋
               </li>
             </ul>
           </div>
@@ -153,7 +154,7 @@ function piauciunToKauwei(inputString) {
     [/zh/g, "j"],
     [/sh/g, "X"],
     [/gh/g, ""],
-    [/u([nk])/g, "U$1"],
+    [/u(ng|k)/g, "U$1"],
     [/iu/g, "iui"],
     [/yu/g, "yui"],
     [/U/g, "u"],
@@ -168,6 +169,7 @@ function piauciunToKauwei(inputString) {
     [/tz/g, "ts"],
     [/([hjsz])y/g, "$1z"],
     [/([ao])h/g, "$1eh"],
+    [/(\w)iui/g, "$1ui"]
   ];
 
   let resultString = inputString;
