@@ -2,7 +2,7 @@ import { useState, memo } from "react";
 import dictData from "./assets/char_phon_simp.json";
 import Dinishing from "./assets/dinishing.svg?react";
 const footerlinks = [
-  { link: "https://github.com/DINISHING/name-transliterator", text: "原始碼" },
+  { link: "https://github.com/DINISHING/name-transliterator", text: "源碼棚" },
   {
     link: "https://github.com/DINISHING/standards/tree/main/phonetics",
     text: "拼音方案",
