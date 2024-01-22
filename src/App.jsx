@@ -62,11 +62,11 @@ function App() {
           <div className="alert alert-primary" role="alert">
             <ul>
               <li>請輸入正體漢字，簡體字會尋弗着</li>
-              <li>一次輸入大量字數會卡死瀏覽器</li>
-              <li>結果僅供參考</li>
+              <li>一埭打進大量字符會卡煞瀏覽器</li>
+              <li>結果僅畀參考</li>
               <li>
-                任何字音錯誤請到
-                <a href="https://github.com/DINISHING/vocabulary">該個倉庫</a>
+                有啥字音錯誤請去
+                <a href="https://github.com/DINISHING/vocabulary">該隻棚</a>
                 反饋
               </li>
             </ul>
