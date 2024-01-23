@@ -127,7 +127,12 @@ function lookupRomanization(name) {
     return combinations;
   }
 
-  const chName = name.replace(/[^\u4E00-\u9FA5，,]/g, "").replace("，", ",");
+  const chName = name
+    .replace(
+      /[^\u{4E00}-\u{9FFF}\u{3400}-\u{4DBF}\u{20000}-\u{2A6DF}\u{2A700}-\u{2B73F}\u{2B740}-\u{2B81F}\u{2B820}-\u{2CEAF}\u{2CEB0}-\u{2EBEF}\u{30000}-\u{3134F}\u{F900}-\u{FAFF}\u{2F800}-\u{2FA1F}，,]/gu,
+      ""
+    )
+    .replace("，", ",");
   if (!chName.length) {
     return null;
   }
@@ -139,7 +144,12 @@ function lookupRomanization(name) {
       result.push([","]);
     } else {
       const A = dictData[char];
-      result.push(A ? A : ["[未知讀音]"]);
+
+      result.push(
+        A
+          ? [...new Set(A.map((item) => item.replace(/\d/g, "")))]
+          : ["[未知讀音]"]
+      );
     }
   }
 
@@ -169,7 +179,7 @@ function piauciunToKauwei(inputString) {
     [/c/g, "ch"],
     [/tz/g, "ts"],
     [/([ao])h/g, "$1eh"],
-    [/(\w)iui/g, "$1ui"]
+    [/(\w)iui/g, "$1ui"],
   ];
 
   let resultString = inputString;
@@ -193,7 +203,7 @@ function capitalizeWords(str) {
 
   // Join the capitalized words back into a string
   let result = capitalizedWords.join(" ");
-  return result.replace(/\d/g, "");
+  return result;
 }
 
 export default App;
