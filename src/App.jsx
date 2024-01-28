@@ -7,7 +7,7 @@ const footerlinks = [
     link: "https://github.com/DINISHING/standards/tree/main/phonetics",
     text: "拼音方案",
   },
-  { link: "https://github.com/vocabulary", text: "字音庫" },
+  { link: "https://github.com/DINISHING/vocabulary", text: "字音庫" },
 ];
 
 function App() {
