@@ -1,5 +1,5 @@
 import { useState, memo } from "react";
-import dictData from "./assets/char_phon_simp.json";
+//import dictData from "./assets/char_phon_simp.json";
 import Dinishing from "./assets/dinishing.svg?react";
 const footerlinks = [
   { link: "https://github.com/DINISHING/name-transliterator", text: "源碼棚" },
@@ -9,6 +9,16 @@ const footerlinks = [
   },
   { link: "https://github.com/DINISHING/vocabulary", text: "字音庫" },
 ];
+
+var dictData;
+async function fetchJSON() {
+  console.log("Loading dictionary...");
+  const response = await fetch("/char_phon_simp.json");
+  const json = await response.json();
+  dictData = json;
+  console.log("Loaded dictionary.");
+}
+fetchJSON();
 
 function App() {
   const [name, setName] = useState("");
@@ -97,7 +107,6 @@ const Romanization = memo(function Romanization({ name, spelling }) {
     return null;
   }
   const romanizationList = lookupRomanization(name);
-  console.log(romanizationList);
   if (!romanizationList) {
     return null;
   }
