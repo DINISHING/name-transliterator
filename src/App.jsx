@@ -13,7 +13,7 @@ const footerlinks = [
 var dictData;
 async function fetchJSON() {
   console.log("Loading dictionary...");
-  const response = await fetch("./char_phon_simp.json");
+  const response = await fetch("https://dinishing.github.io/vocabulary/char_phon_simp.json");
   const json = await response.json();
   dictData = json;
   console.log("Loaded dictionary.");
