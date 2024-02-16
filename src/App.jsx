@@ -190,23 +190,21 @@ function piauciunToKauwei(inputString) {
     [/ae/g, "an"],
     [/oe/g, "oen"],
     [/e\b/g, "en"],
-    [/ien/g, "Ien"],
+    [/ien/g, "iien"],
     [/([ao])h/g, "$1eh"],
 
     [/ai/g, "ae"],
     [/au/g, "ao"],
-    [/ieu/g, "Ieo"],
+    [/ieu/g, "iiu"],
     [/eu/g, "eo"],
 
     [/u([aeo])/g, "w$1"],
 
-    [/ng?i([aeou])/g, "ny$1"],
-    [/ng?i/g, "nyi"],
-    [/([kgh])i([aeou])/g, "$1y$2"],
-    [/([kgh])i/g, "$1yi"],
+    [/ngi/g, "nyi"],
+    [/([kghn])i/g, "$1yi"],
     [/(j|H)i([aeou])/g, "$1$2"],
     [/([jHsz])y/g, "$1z"],
-    [/I/g, "i"],
+    [/ii/g, "i"],
     [/H/g, "h"],
     [/(\w)iui/g, "$1ui"],
   ];
