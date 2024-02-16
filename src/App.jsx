@@ -194,7 +194,6 @@ function piauciunToKauwei(inputString) {
 
     [/ai/g, "ae"],
     [/au/g, "ao"],
-    [/ieu/g, "iu"],
     [/eu/g, "eo"],
 
     [/u([aeo])/g, "w$1"],
@@ -205,6 +204,7 @@ function piauciunToKauwei(inputString) {
     [/([kgh])i/g, "$1yi"],
     [/(j|H)i([aeou])/g, "$1$2"],
     [/([jHsz])y/g, "$1z"],
+    [/ieo/g, "iu"],
     [/H/g, "h"],
     [/(\w)iui/g, "$1ui"],
   ];
