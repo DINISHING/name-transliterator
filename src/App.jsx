@@ -199,9 +199,11 @@ function piauciunToKauwei(inputString) {
     [/eu/g, "eo"],
 
     [/u([aeo])/g, "w$1"],
-
+    
+    [/ngi([aeou])/g, "ny$1"],
     [/ngi/g, "nyi"],
-    [/([kghn])i/g, "$1yi"],
+    [/([kgh])i([aeou])/g, "$1y$2"],
+    [/([kgh])i/g, "$1yi"],
     [/(j|H)i([aeou])/g, "$1$2"],
     [/([jHsz])y/g, "$1z"],
     [/([jHsz])ui\b/g, "$1u"],
