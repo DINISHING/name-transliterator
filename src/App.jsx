@@ -13,7 +13,9 @@ const footerlinks = [
 var dictData;
 async function fetchJSON() {
   console.log("Loading dictionary...");
-  const response = await fetch("https://dinishing.github.io/vocabulary/char_phon_simp.json");
+  const response = await fetch(
+    "https://dinishing.github.io/vocabulary/char_phon_simp.json"
+  );
   const json = await response.json();
   dictData = json;
   console.log("Loaded dictionary.");
@@ -171,23 +173,39 @@ function piauciunToKauwei(inputString) {
     [/(m|n|l|ng)h/g, "$1"],
     [/j/g, "dj"],
     [/zh/g, "j"],
-    [/sh/g, "X"],
+    [/sh/g, "sH"],
+    [/c/g, "cH"],
+    [/tz/g, "ts"],
     [/gh/g, ""],
-    [/u(ng|k)/g, "U$1"],
+
+    [/ok/g, "oH"],
+    [/uk/g, "ooH"],
+    [/ung/g, "oong"],
     [/iu/g, "iui"],
     [/yu/g, "yui"],
-    [/U/g, "u"],
-    [/ngi([aeou])/g, "ny$1"],
-    [/ngi/g, "nyi"],
+    [/(e|i)ng/g, "$1n"],
+    [/(e|i)n/g, "$1ng"],
+    [/(e|i)k/g, "$1h"],
+    [/iae/g, "ie"],
+    [/ae/g, "an"],
+    [/oe/g, "oen"],
+    [/e\b/g, "en"],
+    [/([ao])h/g, "$1eh"],
+
+    [/ai/g, "ae"],
+    [/au/g, "ao"],
+    [/ieu/g, "iu"],
+    [/eu/g, "eo"],
+
+    [/u([aeo])/g, "w$1"],
+
+    [/ng?i([aeou])/g, "ny$1"],
+    [/ng?i/g, "nyi"],
     [/([kgh])i([aeou])/g, "$1y$2"],
     [/([kgh])i/g, "$1yi"],
-    [/([kgh]|ng)u([aeo])/g, "$1w$2"],
-    [/([cXj])i([aeou])/g, "$1$2"],
-    [/([cXjsz])y/g, "$1z"],
-    [/X/g, "sh"],
-    [/c/g, "ch"],
-    [/tz/g, "ts"],
-    [/([ao])h/g, "$1eh"],
+    [/(j|H)i([aeou])/g, "$1$2"],
+    [/([jHsz])y/g, "$1z"],
+    [/H/g, "h"],
     [/(\w)iui/g, "$1ui"],
   ];
 
